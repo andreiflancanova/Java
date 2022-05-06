@@ -1,0 +1,38 @@
+package Lista0605;
+
+import java.util.Scanner;
+
+public class Q01PS 
+{
+
+	public static void main(String[] args) 
+	{
+		/*	ENUNCIADO
+		1. Faça um sistema que leia a idade de uma pessoa expressa em anos, meses e
+		dias e mostre-a expressa apenas em dias.
+		*/
+		
+		//Declaração de Variáveis
+		int A,M,D,ID;
+		
+		Scanner leia1 = new Scanner(System.in);
+		//Leitura de dados
+		{
+			System.out.println("\nInsira o número de anos de idade completos que você tem: ");
+			A=leia1.nextFloat();
+
+			System.out.println("\nInsira o número de meses completos desde o seu último aniversário: ");
+			M=leia1.nextFloat();
+
+			System.out.println("\nInsira o número de dias desde o seu último mesversário: ");
+			D=leia1.nextFloat();
+			
+		}
+		//Cálculo da idade em dias
+		ID=A*365+M*30+D
+		
+		//Imprimir o resultado de ID
+		escreva("\nSua idade expressa em dias vale ",ID)
+	}
+
+}

@@ -1,0 +1,115 @@
+package Familia52;
+
+import java.util.Scanner;
+
+public class AAOlaMundo {
+	public static void main(String[] args) 
+	{
+
+
+		//Comentários de 01 linha
+		/*
+ 	Comentários de
+ 	mais de 01 linha
+		 */
+
+		//Declaracao de variaveis
+		double N1,N2,N3,N4,N5,Med;
+		int Op;
+
+		//Criar comando Scanner e renomear ele para "leia"
+		/*
+	O comando "Try" vai "testar" o código para que, caso
+	ocorra um erro,	ele mostre para o usuário de uma forma
+	mais amigável, p/ não aparecer aqueles erros de programação
+	para o user final
+		 */
+		//Leitura de Variaveis
+		/*
+		 O comando Scanner serve para instanciar o leia
+		 
+		 */
+		Scanner leia1 = new Scanner(System.in);
+		{
+			System.out.println("\nEntre com a primeira nota: ");
+			N1=leia1.nextFloat();
+
+			System.out.println("\nEntre com a segunda nota: ");
+			N2=leia1.nextFloat();
+
+			System.out.println("\nEntre com a terceira nota: ");
+			N3=leia1.nextFloat();
+
+		}
+
+
+		/*	System e a classe
+		out eh um objeto
+		println eh uma classe	*/
+
+		//Calculos
+		//Media
+		//O concatenador no Java é o "+" e não a ","
+		Med=(N1+N2+N3)/3;
+		System.out.println("\nMédia Aritmética: "+Med);
+		//Alterações dos tipos de saída:
+		System.out.printf("\nEntre com a terceira nota:  %2.3f",Med);
+
+		/*
+		 O %3 arredonda o valor para 3 casas depois da virgula
+		 O .2f mostra 2 casas depois da vírgula
+		 */
+
+		//Uso do if e else
+		if(Med>=7 && Med<=10)
+		{
+			System.out.println("\nAlune Aprovade!");
+		}
+		else if(Med>=5 && Med<7)
+		{
+			System.out.println("\nAlune de Exame!");
+		}
+		else
+		{
+			System.out.println("\nAlune reprovade!");
+		}
+
+		//Operações matemáticas
+		//Cálculo de raiz
+		N4=Math.sqrt(N2);
+
+		//Cálculo de potência
+		N5=Math.pow(N3, 3);
+
+				//Menu de Opções
+				System.out.println("\nMENU DE ELOGIOS!");
+		System.out.println("\n1 - Família muito compenetrada!");
+		System.out.println("\n2 - Família muito unida!");
+		System.out.println("\n3 - Família muito criativa!");
+		System.out.println("\n4 - Família muito gentil!");
+		System.out.println("\nESCOLHA A SUA OPÇÃO");
+
+		Scanner leia2 = new Scanner(System.in);
+		Op=leia2.nextInt();
+
+		//Escolha caso no Java é Switch Case
+		switch(Op)
+		{
+		case 1:
+			System.out.println("\n1 - Família muito compenetrada!");
+			break;
+		case 2:
+			System.out.println("\n2 - Família muito unida!");
+			break;	
+		case 3:
+			System.out.println("\n3 - Família muito criativa!");
+			break;
+		case 4:
+			System.out.println("\n4 - Família muito gentil!");
+			break;
+		default:
+			System.out.println("\nOpção inválida");
+		}
+
+	}
+}

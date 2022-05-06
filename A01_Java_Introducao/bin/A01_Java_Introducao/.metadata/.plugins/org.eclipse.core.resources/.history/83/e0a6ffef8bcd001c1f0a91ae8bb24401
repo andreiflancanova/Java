@@ -1,0 +1,38 @@
+package Lista0605;
+
+import java.util.Scanner;
+
+public class Q04LD {
+
+	public static void main(String[] args) 
+	/*
+	 Faça um programa em que permita a entrada de um número qualquer
+	 e exiba se este número é par ou ímpar. 
+	 Se for par exiba também a raiz quadrada do mesmo;
+	 se for ímpar exiba o número elevado ao quadrado.
+	 Scanner é importação da biblioteca
+	 */
+	{
+	//Declaração de Variáveis
+		int A;
+		double B;
+	//Leitura de Dados
+		Scanner read=new Scanner(System.in);
+		System.out.println("\nInsira o número de anos de idade completos que você tem: ");
+		A=read.nextInt();
+		
+	//Verificar se é par ou ímpar
+		if(A%2==0)
+		{
+			B=Math.sqrt(A);
+			System.out.printf("\nO número %d é par, e sua raiz é %4.32f");
+		}
+		else
+		{
+			B=Math.pow(A, 2);
+			System.out.println("\nO número "+A+" é ímpar.");
+		}
+
+	}
+
+}
