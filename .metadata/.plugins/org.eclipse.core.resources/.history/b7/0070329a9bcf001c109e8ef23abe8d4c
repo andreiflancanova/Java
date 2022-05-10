@@ -1,0 +1,35 @@
+package Aula0905;
+
+import java.util.Scanner;
+
+public class A_09_05_Laco_Repeticao {
+
+	public static void main(String[] args) {
+		// Declaração de Variáveis
+		float N1,N2,N3,Med,MedG,SumMed=0;
+		int x;
+		
+		Scanner input =new Scanner(System.in);
+		
+		//Laço de Repetição
+		for (x=1;x<=4;x++)
+		{
+			System.out.println("\nInsira a primeira nota: ");
+			N1=input.nextFloat();
+			
+			System.out.println("\nInsira a segunda nota: ");
+			N2=input.nextFloat();
+			
+			System.out.println("\nInsira a terceira nota: ");
+			N3=input.nextFloat();
+			
+			Med=(N1+N2+N3)/3;
+			
+			System.out.printf("\nA Média Aritmética do alune %d foi de %.2f: ",x,Med);
+			SumMed+=Med
+		}
+		MedG=SumMed/4;
+		System.out.printf("\nA Média Geral da turma foi de %.2f: ",MedG);
+	}
+
+}

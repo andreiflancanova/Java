@@ -1,0 +1,38 @@
+package Aula0905;
+
+import java.util.Scanner;
+
+public class A_09_05_While {
+
+	public static void main(String[] args) {
+		// Declaração de Variáveis
+		int N,SumN=0,QuantN=0;
+		float MedN=0;
+		
+		Scanner input =new Scanner(System.in);
+		
+		System.out.println("\nInsira um número: ");
+		N=input.nextInt();
+		
+		while(N!=0)
+		{
+			SumN+=N;
+			QuantN++;
+			System.out.println("\nInsira um novo número. Se quiser parar, digite 0: ");	
+			N=input.nextInt();
+		}
+		
+		if(QuantN==0)
+		{
+			System.out.println("\nNão é possível realizar uma divisão por 0 ");
+		}
+		else
+		{
+			MedN=SumN/QuantN;
+			System.out.printf("\nA quantidade de números lidos foi de: %d",QuantN);
+			System.out.printf("\nA soma dos números lidos foi de: %d",SumN);
+			System.out.printf("\nA média dos números lidos foi de: %.2f",MedN);
+		}
+	}
+
+}

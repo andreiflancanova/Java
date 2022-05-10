@@ -1,0 +1,21 @@
+package Lista0905_Lacos_Repeticao;
+
+public class Q01_For_Lista_09_05 
+{
+/*	Informar todos os números de 1000 a 1999 que,
+ * 	quando divididos por 11, obtemos resto = 5.
+ 
+ */
+	public static void main(String[] args) 
+	{
+		// Declaração de Variáveis
+		int N;
+		
+		for (N=1000;N<=1999;N++)
+		{
+			System.out.print(" ,"+N);
+		}
+		
+	}
+
+}

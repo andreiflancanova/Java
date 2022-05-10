@@ -1,0 +1,28 @@
+package Aula0905;
+
+public class A_09_05_DoWhile {
+
+	public static void main(String[] args) {
+		// Declaração de Variáveis
+		int N,QPar=0,QImpar=0;
+		Scanner input = new Scanner(System.in);
+		do
+		{
+			System.out.println("\nInsira um número inteiro positivo: ");
+			N = input.NextInt();
+			if(N%2==0)
+			{
+				QPar++
+			}
+			else
+			{
+				QImpar++
+			}
+		}
+		while(QPar!=3);
+		System.out.println("\nA quantidade de números ímpares é "+QImpar+".");
+		System.out.println("\nA quantidade de números pares é "+QPar+".");
+
+	}
+
+}

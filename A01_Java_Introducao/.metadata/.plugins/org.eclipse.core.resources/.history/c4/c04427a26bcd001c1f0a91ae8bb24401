@@ -1,0 +1,66 @@
+package Lista0605;
+
+import java.util.Scanner;
+
+public class Q02LD {
+
+	public static void main(String[] args) 
+	{
+		/* 	  Menor	  Meio	  Maior
+		A		B		C
+		A		C		B
+		B		A		C
+		B		C		A
+		C		A		B
+		C		B		A
+		 */
+
+		int A,B,C;
+
+		Scanner leia=new Scanner(System,in);
+
+		System.out.println("\nEntre com A: ");
+		A=leia.nextInt();
+
+		System.out.println("\nEntre com B: ");
+		B=leia.nextInt();
+
+		System.out.println("\nEntre com A: ");
+		C=leia.nextInt();
+
+		//A		B		C
+		if(A<=B && B<=C)
+		{
+			System.out.println("\nOrdem crescente: "+A+" , "+B+", "+C);
+		}
+
+		//A		C		B
+		else if (A<=C && C<=B)
+		{
+			System.out.println("\nOrdem crescente: "+A+" , "+C+", "+B);		
+		}
+
+		//B		A		C	
+		else if (B<=A && A<=C)
+		{
+			System.out.println("\nOrdem crescente: "+B+" , "+A+", "+C);		
+		}
+
+		//B		C		A
+		else if (B<=C && C<=A)
+		{
+			System.out.println("\nOrdem crescente: "+B+" , "+C+", "+A);		
+		}
+
+		//C		A		B
+		else if (C<=A && A<=B)
+		{
+			System.out.println("\nOrdem crescente: "+C+" , "+A+", "+B);		
+		}
+		//C		B		A
+		else
+		{
+			System.out.println("\nOrdem crescente: "+C+" , "+B+", "+A);		
+		}
+	}
+}

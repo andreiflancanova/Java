@@ -1,0 +1,78 @@
+package Familia52;
+
+import java.util.Scanner;
+
+public class AAOlaMundo 
+{
+	public static void main(String[] args) 
+	{
+		
+	
+	//Comentários de 01 linha
+	/*
+ 	Comentários de
+ 	mais de 01 linha
+	*/
+	
+	//Declaracao de variaveis
+	double N1,N2,N3,N4,N5,Med;
+	
+	//Criar comando Scanner e renomear ele para "leia"
+	/*
+	O comando "Try" vai "testar" o código para que, caso
+	ocorra um erro,	ele mostre para o usuário de uma forma
+	mais amigável, p/ não aparecer aqueles erros de programação
+	para o user final
+	 */
+	//Leitura de Variaveis
+	try (Scanner leia = new Scanner(System.in)) 
+		{
+			System.out.println("\nEntre com a primeira nota: ");
+			N1=leia.nextFloat();
+		
+			System.out.println("\nEntre com a segunda nota: ");
+			N2=leia.nextFloat();
+		
+			System.out.println("\nEntre com a terceira nota: ");
+			N3=leia.nextFloat();
+		
+		}
+		
+
+	/*	System e a classe
+		out eh um objeto
+		println eh uma classe	*/
+	
+	//Calculos
+		//Media
+		//O concatenador no Java é o "+" e não a ","
+		Med=(N1+N2+N3)/3;
+		System.out.println("\nMédia Aritmética: "+Med);
+		//Alterações dos tipos de saída:
+		System.out.printf("\nEntre com a terceira nota:  %2.3f",Med);
+		
+		/*
+		 O %3 arredonda o valor para 3 casas depois da virgula
+		 O .2f mostra 2 casas depois da vírgula
+		 */
+	
+	//Uso do if e else
+		if(Med>=7 && Med<=10)
+		{
+			System.out.println("\nAlune Aprovade!");
+		}
+		else if(Med>=5 && M<7)
+		{
+			System.out.println("\nAlune de Exame!");
+		}
+		else
+		{
+			System.out.println("\nAlune reprovade!");
+		}
+		
+	//Operações matemáticas
+		
+		N4=Math.sqrt(N2);
+		N5=Math.pow(N3, 3)
+	}
+}

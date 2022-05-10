@@ -1,0 +1,42 @@
+package Lista0905_Lacos_Repeticao;
+
+import java.util.Scanner;
+
+public class Q02_For_Lista_09_05 
+{
+
+	public static void main(String[] args) 
+	{
+		// Declaração de Variáveis
+		int N,CPar=0,CImpar=0;
+
+		//Estrutura para leitura de dados --> Scanner
+		Scanner input =new Scanner(System.in);
+		
+		System.out.println("\nInsira um número: ");
+		N=input.nextInt();
+		
+		//Loop For de 10 números
+		for (N=1;N<=10;N++)
+		{
+			System.out.println("\nInsira um número inteiro positivo: ");
+			N=input.nextInt();
+			
+			if(N<0)
+			{
+				System.out.println("\nInsira um número inteiro positivo: ");
+				N=input.nextInt();
+			}
+			
+			else if(N%2=0)
+			{
+				CPar++;
+			}
+			
+			else
+			{
+				CImpar++;
+			}
+		}	
+	}
+}

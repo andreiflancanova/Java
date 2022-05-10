@@ -1,0 +1,57 @@
+package Lista0905_Lacos_Repeticao;
+
+import java.util.Scanner;
+
+public class Q06_DoWhile_Lista_09_05 
+{
+	/*
+	 	Escrever um programa que receba vários números inteiros no teclado. E no
+		final imprimir a média dos números múltiplos de 3. Para sair digitar 0.
+	 */
+	public static void main(String[] args) 
+	{
+		//Declaração de Variáveis
+		int N,NT=0,NM3=0,SM3=0;
+		float Med3;
+		
+		//Estrutura para leitura de dados --> Scanner
+		Scanner input = new Scanner(System.in);
+		
+		//Estrutura Do While
+		//Colocar o primeiro input FORA DO "Do While"
+		System.out.println("\nOLÁ! SEJA BEM-VINDO! ");
+		System.out.println("\nInsira um número inteiro: ");
+		N = input.nextInt();
+		do
+		{		
+			//Múltiplos de 3
+			if(N%3==0)
+			{
+					NM3++;
+					NT++;
+					SM3+=N;
+					System.out.println("\nEntrada válida de Múltiplo de 3.");
+					System.out.println("\nInsira um valor inteiro positivo. Se quiser parar, digite 0.");
+					N=input.nextInt();
+			}
+			else
+			{
+					NT++;
+					System.out.println("\nEntrada válida.");
+					System.out.println("\nInsira um valor inteiro. Se quiser parar, digite 0.");
+					N=input.nextInt();
+					
+			}
+		}
+		while(N!=0);
+		//Calcular a Média dos Múltiplos de 3
+		Med3=SM3/NM3;
+		
+		//Saída de dados
+		System.out.printf("\nO número total de números inteiros positivos inseridos foi de %.1f números",NT);
+		System.out.printf("\nO número total de múltiplos de 3 positivos inseridos foi de %.1f números",NM3);
+		System.out.printf("\nA média dos múltiplos de 3 positivos inseridos foi de %.2f números",Med3);
+		
+	}
+
+}

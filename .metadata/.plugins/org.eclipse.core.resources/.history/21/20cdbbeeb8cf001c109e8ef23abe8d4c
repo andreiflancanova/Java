@@ -1,0 +1,47 @@
+package Lista0905_Lacos_Repeticao;
+
+import java.util.Scanner;
+
+public class Q03_While_Lista_09_05 
+{
+	/*	ENUNCIADO:
+		Solicitar a idade de várias pessoas e imprimir: Total de pessoas com menos de
+		21 anos. Total de pessoas com mais de 50 anos. O programa termina quando
+		idade for =-99.
+	 */
+	public static void main(String[] args) 
+	{
+		//Declaração de Variáveis
+		float Id,QL21=0,QB50=0,QId=0;
+		
+		//Estrutura para leitura de dados --> Scanner
+		Scanner input =new Scanner(System.in);
+		
+		System.out.println("\nInsira o valor da idade da pessoa: ");
+		Id=input.nextFloat();
+		
+		//Loop While para inserir várias idades
+		while(Id>=0 && Id<=120)
+		{
+			if(Id<21)
+			{
+				QL21++;
+			}
+			else if (Id>50)
+			{
+				QB50++;
+			}
+			else
+			{
+				QId++;
+			}
+			System.out.println("\nInsira um novo número. Se quiser parar, digite -99: ");	
+			Id=input.nextFloat();
+		}
+		//Impressão de valores
+		System.out.println("\nO número de pessoas com menos de 21 anos é de "+QL21+" pessoas");	
+		System.out.println("\nO número de pessoas com mais de 50 anos é de "+QB50+" pessoas");
+		System.out.println("\nO número de pessoas que não se enquadra em nenhuma categoria é de "+QId+" pessoas");	
+	}
+
+}
